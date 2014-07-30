@@ -1,0 +1,15 @@
+﻿body,form {
+    margin:0px;
+    height:100%;
+}
+.TopDiv {
+    height:40px;
+    background-color:#07a8ef;
+}
+.RT {
+    width:200px;
+    float:right;
+    height: 40px;
+    color:white;
+    line-height:40px;
+}

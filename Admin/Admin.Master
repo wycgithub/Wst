@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Wst.Admin.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="../css/Admin.css" rel="stylesheet" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="TopDiv">
+       <a>揭阳潮汕机场工作质量巡查系统</a>
+       <a style="margin-left:600px">操作用户 <i>""</i></a>
+       </div>
+        <div class="MainDiv">
+            <div class="LeftDiv">
+                <ul>
+                    <li>用户设置<ul><li>创建用户</li><li>用户列表</li><li>用户权限</li></ul></li>
+                    <li>设备设置<ul><li>创建设备</li><li>设备列表</li></ul></li>
+                    <li>工作记录表</li>
+                    <li>出勤表</li>
+                </ul>
+                
+            </div>
+            <div class="CenterDiv">
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+         </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

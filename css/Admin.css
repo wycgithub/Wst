@@ -1,0 +1,14 @@
+﻿body,form{
+    height:100%;
+}
+* {
+    margin:0px;
+}
+.TopDiv {
+    height:40px;
+}
+.LeftDiv,.CenterDiv {
+    display:inline;
+    width:400px;
+    float:left
+}
