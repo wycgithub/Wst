@@ -10,7 +10,7 @@ using Wst.Model;
 
 namespace Wst.Repository
 {
-    public class BaseRepository<T> : IRepository<T> where T : class
+    public class BaseRepository<T> : IRepository<T> where T : IEntity
     {
         private readonly DbContext context;
         private DbContext DbContext { get; set; }
@@ -50,7 +50,7 @@ namespace Wst.Repository
             }
             catch
             {
-                T oldEntity = dbset.Find(entity.ID);
+                T oldEntity = dbset.Find(entity);
                 context.Entry(oldEntity).CurrentValues.SetValues(entity);
             }
         }
@@ -66,6 +66,14 @@ namespace Wst.Repository
                 dbset.Attach(entity);
             }
             dbset.Remove(entity);
+        }
+        /// <summary>
+        /// 根据ID删除
+        /// </summary>
+        /// <param name="ID"></param>
+        public virtual void DeleteByID(int ID)
+        {
+            dbset.Remove(dbset.Find(ID));     
         }
         //删除多个
         public virtual void Delete(IEnumerable<T> entities)

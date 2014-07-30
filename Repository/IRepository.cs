@@ -13,6 +13,7 @@ namespace Wst.IRepository
         void Update(T entity);
         void Delete(T entity);
         void Delete(IEnumerable<T> entities);
+        void DeleteByID(int ID);
         IEnumerable<T> Get(Expression<Func<T, bool>> where);
         IEnumerable<T> GetAll();
         int Commit();

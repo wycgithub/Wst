@@ -7,8 +7,20 @@
 .TopDiv {
     height:40px;
 }
+.MainDiv,.LeftDiv,.CenterDiv {
+    height:1000px;
+}
 .LeftDiv,.CenterDiv {
     display:inline;
-    width:400px;
+    width:700px;
     float:left
+}
+.LeftDiv {
+    width:200px;
+}
+.hidden {
+    display:none;
+}
+ul {    
+    list-style:none;
 }

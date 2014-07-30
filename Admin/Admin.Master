@@ -5,11 +5,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link href="../css/Admin.css" rel="stylesheet" />
+    <script src="../Js/jquery-1.11.1.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
+    <script>
+        $(function () {
+            $('.Show').click(function () {
+                $(this).find('.hidden').slideToggle('fast');
+            })
+        });
+    </script>
 <body>
     <form id="form1" runat="server">
     <div class="TopDiv">
@@ -18,13 +26,12 @@
        </div>
         <div class="MainDiv">
             <div class="LeftDiv">
-                <ul>
-                    <li>用户设置<ul><li>创建用户</li><li>用户列表</li><li>用户权限</li></ul></li>
-                    <li>设备设置<ul><li>创建设备</li><li>设备列表</li></ul></li>
-                    <li>工作记录表</li>
-                    <li>出勤表</li>
-                </ul>
-                
+                <ul >
+                    <li class="Show">用户设置<ul class="hidden" onclick="event.cancelBubble=true"><li>创建用户</li><li>用户列表</li><li>用户权限</li></ul></li>
+                    <li class="Show">设备设置<ul class="hidden" onclick="event.cancelBubble=true"><li>创建设备</li><li>设备列表</li></ul></li>
+                    <li class="Show">工作记录表</li>
+                    <li class="Show">出勤表</li>
+                </ul>              
             </div>
             <div class="CenterDiv">
          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

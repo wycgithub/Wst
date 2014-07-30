@@ -24,7 +24,7 @@ namespace Wst.Service
         /// </summary>
         /// <param name="where"></param>
         /// <returns></returns>
-        protected Users GetByCondition(Expression<Func<Users,bool>> where)
+        public Users GetByCondition(Expression<Func<Users,bool>> where)
         {
             return uRepository.Get(where).FirstOrDefault(); 
         }
@@ -52,6 +52,26 @@ namespace Wst.Service
         public void Delete(Users entity)
         {
             uRepository.Delete(entity);
+            uRepository.Commit();
+        }
+        /// <summary>
+        /// 根据ID删除用户
+        /// </summary>
+        /// <param name="ID"></param>
+        public void DeleteByID(int ID)
+        {
+            uRepository.DeleteByID(ID);
+            uRepository.Commit();
+        }
+        //添加单个
+        public void Add(Users entity)
+        {
+            uRepository.Add(entity);
+            uRepository.Commit();
+        }
+        public void Add(List<Users> entity)
+        {
+            uRepository.Add(entity);
             uRepository.Commit();
         }
         

@@ -18,9 +18,9 @@
 <body>
     <form id="form1" runat="server">
         <table style="border-style: solid; border-color: inherit; border-width: 1px; width:344px; height:210px; margin:150px 500px; ">
-            <tr><td><asp:TextBox runat="server" Width="300px" Height="30px">帐号：</asp:TextBox></td></tr>
-            <tr><td><asp:TextBox runat="server" Width="300px" Height="30px">密码：</asp:TextBox></td></tr>
-            <tr><td><asp:Button ID="Button1" Width="103px" runat="server" Text="登录" Height="43px" /></td></tr>
+            <tr><td><asp:TextBox runat="server" Width="300px" ID="UseName" Height="30px">帐号：</asp:TextBox></td></tr>
+            <tr><td><asp:TextBox runat="server" Width="300px" ID="PassWord" Height="30px">密码：</asp:TextBox></td></tr>
+            <tr><td><asp:Button ID="Button1" Width="103px" runat="server" Text="登录" Height="43px" OnClick="Button1_Click" /></td></tr>
         </table>
     </form>
 </body>
