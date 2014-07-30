@@ -10,7 +10,7 @@ using Wst.Model;
 
 namespace Wst.Repository
 {
-    public class BaseRepository<T> : IRepository<T> where T : IEntity
+    public class BaseRepository<T> : IRepository<T> where T : class
     {
         private readonly DbContext context;
         private DbContext DbContext { get; set; }
